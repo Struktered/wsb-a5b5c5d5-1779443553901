@@ -1,16 +1,28 @@
 @import "tailwindcss";
 
 @theme {
-  --font-sans: "Geist", ui-sans-serif, system-ui, sans-serif;
-  --font-mono: "Geist Mono", ui-monospace, monospace;
-  --font-serif: "Newsreader", ui-serif, Georgia, serif;
+  --color-fleet-bg:    oklch(0.13 0.01 240);
+  --color-fleet-text:  oklch(0.92 0.005 240);
+  --color-fleet-green: oklch(0.72 0.17 145);
+  --color-fleet-amber: oklch(0.78 0.16 65);
+  --color-fleet-line:  oklch(0.28 0.015 240);
+  --font-sans: "IBM Plex Sans", ui-sans-serif, sans-serif;
+  --font-mono: "IBM Plex Mono", ui-monospace, monospace;
 }
 
-html {
-  -webkit-font-smoothing: antialiased;
-  text-rendering: optimizeLegibility;
-}
-
-body {
-  font-family: var(--font-sans);
+@layer base {
+  *, *::before, *::after { box-sizing: border-box; }
+  html { scroll-behavior: smooth; }
+  body {
+    background-color: oklch(0.13 0.01 240);
+    color: oklch(0.92 0.005 240);
+    font-family: "IBM Plex Sans", ui-sans-serif, sans-serif;
+    -webkit-font-smoothing: antialiased;
+    margin: 0;
+    min-height: 100vh;
+  }
+  :focus-visible {
+    outline: 2px solid oklch(0.72 0.17 145);
+    outline-offset: 2px;
+  }
 }
