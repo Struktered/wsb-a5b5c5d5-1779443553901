@@ -1,0 +1,24 @@
+{
+  "$schema": "https://struktered.com/schema/cms-config-v1.json",
+  "version": 1,
+  "template": "vite-react-tailwind",
+  "node": "22",
+  "build": {
+    "command": "npm run build",
+    "output": "dist",
+    "install": "npm ci"
+  },
+  "register": "brand-dark",
+  "field_registry_refs": [],
+  "asset_pipeline": {
+    "r2_bucket": "struktered-builder-assets",
+    "variant_url_pattern": "/cdn-cgi/image/{variant}/{r2_key}"
+  },
+  "agents": {
+    "planner": "agent_pending",
+    "architect": "agent_pending",
+    "coder": "agent_0135aGpmrZgxYqT8nSSNkZLB",
+    "media_director": "agent_pending",
+    "reviewer": "agent_pending"
+  }
+}
